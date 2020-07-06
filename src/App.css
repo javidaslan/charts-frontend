@@ -20,11 +20,10 @@
 }
 
 .form-div {
-  border: solid yellow;
+  /* border: solid yellow; */
 }
 
 .search-form {
-  border: solid red;
   width: 100%;
   max-width: 600px;
   padding-top: 30px;
@@ -34,7 +33,6 @@
 }
 
 .chart-div {
-  border: solid green;
   text-align: center;
   width: 100%;
   padding-top: 30px;
