@@ -14,7 +14,8 @@
     "reactstrap": "8.4.1",
     "semantic-ui-react": "*",
     "semantic-ui-css": "*",
-    "react-semantic-ui-datepickers": "*"
+    "react-semantic-ui-datepickers": "*",
+    "axios": "*"
   },
   "devDependencies": {},
   "scripts": {

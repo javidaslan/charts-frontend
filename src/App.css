@@ -19,12 +19,12 @@
   font-size: medium;
 }
 
-/* .form-div {
+.form-div {
   border: solid yellow;
-} */
+}
 
 .search-form {
-  /* border: solid red; */
+  border: solid red;
   width: 100%;
   max-width: 600px;
   padding-top: 30px;
@@ -34,15 +34,24 @@
 }
 
 .chart-div {
+  border: solid green;
+  text-align: center;
   width: 100%;
-  max-width: 600px;
   padding-top: 30px;
   margin: auto;
   height: 100%;
+  display: flex; 
+  align-items: center;
+}
+
+.innerChartDiv {
+  /* border: solid yellow; */
+  width: 1000px;
+  height: 500px;
 }
 
 .span {
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 

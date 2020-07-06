@@ -6,37 +6,35 @@ import { Chart } from 'react-google-charts';
 
 class StockChart extends Component {
 
-
+  populateChart = () => {
+    const prices = this.props.prices;
+    const data = [['Day of Month', 'Price']];
+    for (const item in prices){
+      const day = parseInt(item.split('-')[2]);
+      const price = parseFloat(prices[item]["2. high"])
+      data.push([day, price])     
+    }
+    return data;
+  }
+  
   render() {
 
+    const data = this.populateChart();
+    console.log(data);
     return (
       <div>
         <Chart
-          width={'600px'}
-          height={'350px'}
+          className="innerChartDiv"
           chartType="LineChart"
           loader={<div>Loading Chart</div>}
-          data={[
-            ['x', 'dogs'],
-            [0, 0],
-            [1, 10],
-            [2, 23],
-            [3, 17],
-            [4, 18],
-            [5, 9],
-            [6, 11],
-            [7, 27],
-            [8, 33],
-            [9, 40],
-            [10, 32],
-            [11, 35],
-          ]}
+          data={data}
           options={{
             hAxis: {
-              title: 'Time',
+              title: 'Day of Month',
+              showTextEvery: 1
             },
             vAxis: {
-              title: 'Popularity',
+              title: 'Price',
             },
           }}
           rootProps={{ 'data-testid': '1' }}
